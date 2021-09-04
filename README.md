@@ -181,6 +181,10 @@ In some cases your build process and VS Code may be hitting different purs versi
 
 Check the "Output" pane, at the very top after the Language Server starts it will list out the purs binary being used, you can check it's the one you expect. 
 
+### Version mismatch
+
+If you get a "Version mismatch for the externs at..." error it means that the compiled version in your `output/` directory is different from the one that the extensions expects. You can fix this by removing the `output/` directory and rebuilding it with `Purescript: Build` on vscode.
+
 ## API for downstream extensions
 
 VSCode makes it possible for extensions to expose methods to other extensions for cross-extension interaction. The following methods are exposed by `ide-purescript`.
